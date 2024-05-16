@@ -15,8 +15,6 @@
  */
 package com.agentsflex.llm.chatglm;
 
-import com.agentsflex.llm.Llm;
-import com.agentsflex.llm.MessageResponse;
 import com.agentsflex.message.MessageStatus;
 import com.agentsflex.parser.AiMessageParser;
 import com.agentsflex.parser.FunctionMessageParser;
@@ -25,7 +23,6 @@ import com.agentsflex.parser.impl.DefaultFunctionMessageParser;
 import com.agentsflex.prompt.DefaultPromptFormat;
 import com.agentsflex.prompt.Prompt;
 import com.agentsflex.prompt.PromptFormat;
-import com.agentsflex.prompt.TextPrompt;
 import com.agentsflex.util.Maps;
 import com.alibaba.fastjson.JSON;
 import io.jsonwebtoken.JwtBuilder;
@@ -109,5 +106,4 @@ public class ChatglmLlmUtil {
     public static MessageStatus parseMessageStatus(String status) {
         return "stop".equals(status) ? MessageStatus.END : MessageStatus.MIDDLE;
     }
-
 }
